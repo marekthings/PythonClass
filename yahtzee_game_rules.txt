@@ -1,0 +1,14 @@
+"""
+
+    House Rules:
+    ********************
+
+1. Roll five dice.
+2. Keep the ones you want.
+3. Second Roll: Roll the ones you decided not to keep
+4. Keep the ones you want from your second roll and add them to the keep pile.
+5. Third RollRoll one last time. This is your third roll and you are forced to keep these dice.
+6. Now that you have your final stack of dice, you check if it?s valid.
+    6.1.  Then you add your total score, by counting all the dots on the dice, to that field.
+
+"""

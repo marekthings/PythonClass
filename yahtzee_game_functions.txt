@@ -1,0 +1,83 @@
+import random
+def roll_dice():
+
+    """
+    input  : nothing
+    logic  : generate a random numbers in the range 0 and 5
+    return : return list of length 5.
+    """
+##    dice_list=[]
+##    for item in range(0,5):
+##        dice_list+= [random.randint(1,6)]
+
+    # More fancy of doing the above line of codes.
+##    dice_list=[random.randint(1,6) for die in range(0,5)]
+    return dice_list
+
+##print (roll_dice())
+
+
+
+
+def check_yahtzee(list_dice):
+    """
+    input  : list of dice as argument.
+    logic  : Every element in the input list have exactly the same value to be yahtzee. Check if the values in the list_dice are equal. Example: [1,1,1,1,1]
+    output : returns bool
+    """
+    if len(set(list_dice)) == 1:
+        return True
+    else:
+        return False
+
+
+##print "Did I get Yahtzee? ",check_yahtzee([1,1,1,1,1])
+
+def check_large_straight(list_dice):
+    """
+    input: list of dice as argument.
+    logic/ Rule: dice are in the sequence [ 2-3-4-5-6]
+    output: Returns a bool
+    """
+    list_dice.sort()
+    if len(set(list_dice))==5 and list_dice[0]==2 and list_dice[4]==6 :
+        return True
+    return False
+
+##print(large_straight([6,5,4,3,2]))
+
+def check_small_straight(list_of_dice):
+    """
+    input:list of dice
+    logic/ Rule:  dice are in the sequence [1-2-3-4-5]
+    output: return bool
+    """
+    list_of_dice.sort()
+    if len(set(list_of_dice))==5 and list_of_dice[0]==1 and list_of_dice[4]==5:
+        return True
+    return False
+
+##print(check_small_straight([1,2,3,4,5]))
+##print(check_small_straight([1,1,2,2,5]))
+
+def check_four_kind(list_of_dice):
+    """
+    input: list of dice as argument
+    logic: At least four dice the same. Only two ways you can have four of a kind
+            yyyyb or byyyy
+    output: returns bool
+
+    """
+    list_of_dice.sort()
+    if list_of_dice[0] == list_of_dice[3] or list_of_dice[1]==list_of_dice[4]:
+        return True
+    return False
+
+
+##print(check_four_kind([3,4,5,6,1]))
+##print(check_four_kind([6,6,6,6,1]))
+
+
+
+
+
